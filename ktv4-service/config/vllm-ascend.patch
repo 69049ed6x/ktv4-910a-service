@@ -1,0 +1,142 @@
+diff --git a/vllm_ascend/models/deepseek_v4.py b/vllm_ascend/models/deepseek_v4.py
+index b99fd94db..161d546bc 100644
+--- a/vllm_ascend/models/deepseek_v4.py
++++ b/vllm_ascend/models/deepseek_v4.py
+@@ -24,6 +24,7 @@
+ # limitations under the License.
+ #
+ import math
++import re
+ import typing
+ from collections.abc import Callable, Iterable
+ from itertools import islice
+@@ -42,6 +43,7 @@ from vllm.distributed import (
+     get_tensor_model_parallel_rank,
+     get_tensor_model_parallel_world_size,
+     tensor_model_parallel_all_gather,
++    tensor_model_parallel_all_reduce,
+ )
+ from vllm.model_executor.layers.activation import SiluAndMul, SiluAndMulWithClamp
+ from vllm.model_executor.layers.fused_moe import FusedMoE
+@@ -430,6 +432,26 @@ class DeepseekV4MoE(nn.Module):
+             self.gate.tid2eid = None
+             self.gate.e_score_correction_bias = nn.Parameter(torch.empty(config.n_routed_experts, dtype=torch.float32))
+ 
++        self.cpu_experts_enabled = bool(getattr(config, "cpu_experts", False))
++        if self.cpu_experts_enabled:
++            from vllm_ascend.ops.cpu_experts import CPUExpertMoE
++
++            if self.is_sequence_parallel or self.enable_eplb:
++                raise ValueError("CPU experts require replicated tokens and no EPLB")
++            self.n_local_physical_experts = config.n_routed_experts // self.tp_size
++            self.experts = CPUExpertMoE(
++                num_experts=config.n_routed_experts,
++                hidden_size=config.hidden_size,
++                intermediate_size=config.moe_intermediate_size,
++                tp_rank=self.tp_rank,
++                tp_size=self.tp_size,
++                swiglu_limit=self.swiglu_limit,
++                layer_index=layer_idx,
++            )
++            self.renormalize = config.norm_topk_prob
++            self.experts_top_k = config.num_experts_per_tok
++            return
++
+         self.experts = FusedMoE(
+             shared_experts=self.shared_experts,
+             gate=self.gate,
+@@ -460,6 +482,27 @@ class DeepseekV4MoE(nn.Module):
+     def forward(self, hidden_states: torch.Tensor, input_ids=None) -> torch.Tensor:
+         num_tokens, hidden_dim = hidden_states.shape
+         hidden_states = hidden_states.view(-1, hidden_dim)
++        if self.cpu_experts_enabled:
++            # Gate and routing stay on NPU. CPU ranks own disjoint experts.
++            logits = F.linear(hidden_states.float(), self.gate.weight.float())
++            scores = torch.sqrt(F.softplus(logits.float()))
++            if self.hash:
++                if input_ids is None:
++                    raise ValueError("Hash-MoE requires original input token IDs")
++                expert_ids = self.gate.tid2eid[input_ids.long()].long()
++            else:
++                choice = scores + self.gate.e_score_correction_bias.float()
++                expert_ids = choice.topk(self.experts_top_k, dim=-1).indices
++            weights = scores.gather(1, expert_ids)
++            if self.renormalize:
++                weights = weights / weights.sum(-1, keepdim=True).clamp(min=1e-20)
++            weights = weights * self.routed_scaling_factor
++            output = self.experts(hidden_states, expert_ids, weights)
++            if self.shared_experts is not None:
++                output = output + self.shared_experts(hidden_states)
++            if self.tp_size > 1:
++                output = tensor_model_parallel_all_reduce(output)
++            return output
+ 
+         # Chunk the hidden states so they aren't replicated across TP ranks.
+         # This avoids duplicate computation in self.experts.
+@@ -985,6 +1028,7 @@ class DeepseekV2DecoderLayer(nn.Module):
+         hidden_states: torch.Tensor,
+         residual: torch.Tensor | None,
+         llama_4_scaling: torch.Tensor | None = None,
++        input_ids: torch.Tensor | None = None,
+     ) -> torch.Tensor:
+         residual = hidden_states.clone()
+         hidden_states, post, comb = self.hc_pre(hidden_states, self.hc_attn_fn, self.hc_attn_scale, self.hc_attn_base)
+@@ -995,7 +1039,7 @@ class DeepseekV2DecoderLayer(nn.Module):
+         residual = hidden_states.clone()
+         hidden_states, post, comb = self.hc_pre(hidden_states, self.hc_ffn_fn, self.hc_ffn_scale, self.hc_ffn_base)
+         hidden_states = self.post_attention_layernorm(hidden_states)
+-        hidden_states = self.mlp(hidden_states)
++        hidden_states = self.mlp(hidden_states, input_ids=input_ids)
+         hidden_states = self.hc_post(hidden_states, residual, post, comb)
+ 
+         return hidden_states, residual
+@@ -1131,7 +1175,7 @@ class DeepseekV4Model(nn.Module):
+         if get_pp_group().is_first_rank:
+             hidden_states = hidden_states.unsqueeze(1).repeat(1, self.hc_mult, 1)  # (b, s, h) -> (b, s, c, h)
+         for layer in islice(self.layers, self.start_layer, self.end_layer):
+-            hidden_states, residual = layer(positions, hidden_states, residual, llama_4_scaling)
++            hidden_states, residual = layer(positions, hidden_states, residual, llama_4_scaling, input_ids=input_ids)
+ 
+         # Stash pre-hc_head residual for the MTP draft (captured copy_).
+         # When FlashComm1 (sequence parallelism) is enabled, tokens are
+@@ -1317,7 +1361,9 @@ class AscendDeepseekV4ForCausalLM(nn.Module, SupportsPP, DeepseekV2MixtureOfExpe
+ 
+         # Params for weights, fp8 weight scales, fp8 activation scales
+         # (param_name, weight_name, expert_id, shard_id)
+-        if vllm_version_is("0.23.0"):
++        if getattr(self.config, "cpu_experts", False):
++            expert_params_mapping = []
++        elif vllm_version_is("0.23.0"):
+             expert_params_mapping = FusedMoE.make_expert_params_mapping(
+                 self.model,
+                 ckpt_gate_proj_name="gate_proj",
+@@ -1348,7 +1394,20 @@ class AscendDeepseekV4ForCausalLM(nn.Module, SupportsPP, DeepseekV2MixtureOfExpe
+         heads_per_rank = self.config.num_attention_heads // tp_size
+         head_start = tp_rank * heads_per_rank
+ 
++        cpu_experts = bool(getattr(self.config, "cpu_experts", False))
++        expert_pattern = re.compile(
++            r"^(?:model\.)?layers\.(\d+)\.ffn\.experts\.(\d+)"
++            r"\.w([123])\.(weight|weight_scale|weight_offset)$"
++        )
+         for name, loaded_weight in weights:
++            if cpu_experts:
++                match = expert_pattern.match(name)
++                if match:
++                    layer, expert, matrix = map(int, match.group(1, 2, 3))
++                    if layer < self.config.num_hidden_layers:
++                        module = self.model.layers[layer].mlp.experts
++                        module.load_tensor(expert, matrix, match.group(4), loaded_weight)
++                    continue
+             spec_layer = get_spec_layer_idx_from_weight_name(self.config, name)
+             if spec_layer is not None:
+                 continue  # skip spec decode layers for main model
+@@ -1538,4 +1597,8 @@ class AscendDeepseekV4ForCausalLM(nn.Module, SupportsPP, DeepseekV2MixtureOfExpe
+             if not is_fusion_moe_shared_experts_layer:
+                 loaded_params.add(name)
+ 
++        if cpu_experts:
++            for layer in self.model.layers:
++                if not isinstance(layer, PPMissingLayer):
++                    layer.mlp.experts.finish_loading()
+         return loaded_params

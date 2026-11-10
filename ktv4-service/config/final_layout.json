@@ -1,0 +1,122 @@
+{
+  "timestamp": 1794319812.5959792,
+  "disk_usage": {
+    "returncode": 1,
+    "stdout": "24K\t/mnt/nvme0n1/ktv4/code\n3.4G\t/mnt/nvme0n1/ktv4/env210\n92K\t/mnt/nvme0n1/ktv4/config\n1.2M\t/mnt/nvme0n1/ktv4/AscendUsage\n4.0K\t/mnt/nvme0n1/ktv4/tmp\n177M\t/mnt/nvme0n1/ktv4/cache\n160K\t/mnt/nvme0n1/ktv4/app\n3.2M\t/mnt/nvme0n1/ktv4/run\n229M\t/mnt/nvme0n1/ktv4/vendor\n3.8G\t/mnt/nvme0n1/ktv4\n",
+    "stderr": "du: cannot read directory '/mnt/nvme0n1/ktv4/code/llama.cpp-v4ref/gguf-py/gguf/__pycache__': Permission denied\ndu: cannot read directory '/mnt/nvme0n1/ktv4/code/reference': Permission denied\ndu: cannot read directory '/mnt/nvme0n1/ktv4/tmp': Permission denied\n"
+  },
+  "top_level": [
+    "AscendUsage",
+    "DEPENDENCIES.md",
+    "README.md",
+    "app",
+    "cache",
+    "chat.sh",
+    "code",
+    "config",
+    "env210",
+    "requirements.lock.txt",
+    "run",
+    "start.sh",
+    "status.sh",
+    "stop.sh",
+    "tmp",
+    "vendor"
+  ],
+  "config_files": [
+    "cleanup.json",
+    "delivery_checks.json",
+    "final_layout.json",
+    "packages.json",
+    "post_cleanup_verification.json",
+    "runtime.json",
+    "source_manifest.json",
+    "verification.json",
+    "verification_after_removal.json",
+    "vllm-ascend.patch",
+    "vllm-ascend_origin.json",
+    "vllm.patch",
+    "vllm_origin.json"
+  ],
+  "run_files": [
+    {
+      "name": "rank0.json",
+      "bytes": 197
+    },
+    {
+      "name": "rank3.json",
+      "bytes": 197
+    },
+    {
+      "name": "state.json",
+      "bytes": 290
+    },
+    {
+      "name": "control.lock",
+      "bytes": 0
+    },
+    {
+      "name": "command.json",
+      "bytes": 483
+    },
+    {
+      "name": "rank2.json",
+      "bytes": 197
+    },
+    {
+      "name": "rank1.json",
+      "bytes": 197
+    },
+    {
+      "name": "device-2942846_20261110220445759.log",
+      "bytes": 11763
+    },
+    {
+      "name": "device-2942847_20261110220445759.log",
+      "bytes": 11763
+    },
+    {
+      "name": "device-2942848_20261110220434757.log",
+      "bytes": 9347
+    },
+    {
+      "name": "device-2942845_20261110220434757.log",
+      "bytes": 11762
+    },
+    {
+      "name": "device-2942846_20261110220434757.log",
+      "bytes": 9347
+    },
+    {
+      "name": "device-2942847_20261110220434757.log",
+      "bytes": 9347
+    },
+    {
+      "name": "device-2942848_20261110220444759.log",
+      "bytes": 11761
+    }
+  ],
+  "weight_path": "/mnt/nvme1n1/bf16/w8a8-mtp",
+  "weight_config_exists": true,
+  "app_files": [
+    "chat.py",
+    "cpu_experts.py",
+    "dynamic_kv_cache.py",
+    "env.sh",
+    "executor.py",
+    "fast_attention.py",
+    "fast_cpu_experts.py",
+    "fast_moe.py",
+    "fast_small_ops.py",
+    "launch_api.sh",
+    "launch_workers.sh",
+    "legacy_indices.py",
+    "legacy_reference.py",
+    "official_reference_model.py",
+    "runtime.py",
+    "service.py",
+    "settings.py",
+    "worker.py"
+  ],
+  "old_runtime_references": []
+}

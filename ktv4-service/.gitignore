@@ -1,0 +1,7 @@
+/env210/
+/cache/
+/run/
+/deployment.env
+__pycache__/
+*.py[cod]
+*.log

@@ -1,0 +1,95 @@
+{
+  "started": 1794319073.8422816,
+  "tests": [
+    {
+      "name": "start_and_chat_chinese",
+      "exit_code": 0,
+      "answer_output": "四卡模型和 API 已就绪。\n\n模型：你好！很高兴见到你，有什么我可以帮你的吗？😊\n"
+    },
+    {
+      "name": "api_math",
+      "answer": "4",
+      "finish_reason": "stop",
+      "seconds": 56.10318813007325,
+      "payload": {
+        "model": "deepseek-v4-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is 2 + 2? Give only the answer."
+          }
+        ],
+        "temperature": 0,
+        "stream": true,
+        "chat_template_kwargs": {
+          "thinking": false
+        }
+      }
+    }
+  ],
+  "phase": "complete",
+  "stopped_cleanly": true,
+  "fresh_start_seconds": 121.23439412983134,
+  "state": {
+    "phase": "ready",
+    "session": "8567885b312b4777a898b317cdfa7a88",
+    "supervisor": {
+      "pid": 2717505,
+      "created": 1794319086.16
+    },
+    "workers": {
+      "pid": 2717506,
+      "created": 1794319086.28
+    },
+    "api": {
+      "pid": 2729040,
+      "created": 1794319159.83
+    },
+    "started": 1794319086.6916895,
+    "ready_at": 1794319207.330415
+  },
+  "ranks": [
+    {
+      "rank": 0,
+      "pid": 2718847,
+      "session": "8567885b312b4777a898b317cdfa7a88",
+      "context": 1048576,
+      "layers": 43,
+      "routed_experts_device": "cpu",
+      "gate_device": "npu:0",
+      "shared_expert_device": "npu:0"
+    },
+    {
+      "rank": 1,
+      "pid": 2718849,
+      "session": "8567885b312b4777a898b317cdfa7a88",
+      "context": 1048576,
+      "layers": 43,
+      "routed_experts_device": "cpu",
+      "gate_device": "npu:1",
+      "shared_expert_device": "npu:1"
+    },
+    {
+      "rank": 2,
+      "pid": 2718852,
+      "session": "8567885b312b4777a898b317cdfa7a88",
+      "context": 1048576,
+      "layers": 43,
+      "routed_experts_device": "cpu",
+      "gate_device": "npu:2",
+      "shared_expert_device": "npu:2"
+    },
+    {
+      "rank": 3,
+      "pid": 2718854,
+      "session": "8567885b312b4777a898b317cdfa7a88",
+      "context": 1048576,
+      "layers": 43,
+      "routed_experts_device": "cpu",
+      "gate_device": "npu:3",
+      "shared_expert_device": "npu:3"
+    }
+  ],
+  "passed": true,
+  "finished": 1794319374.4301946
+}

@@ -1,0 +1,188 @@
+{
+  "started": 1794318114.3740525,
+  "tests": [
+    {
+      "name": "interactive_chinese",
+      "exit_code": 0,
+      "stdout": "DeepSeek-V4-Flash 终端聊天（已连接）\n直接输入提示词并回车即可提问；回答会逐段显示。\n/clear 清空对话   /help 帮助   /exit 退出\n回答期间按 Ctrl+C 中断本次请求；输入时按 Ctrl+D 退出。\n首次算子编译可能等待数分钟；回答生成到模型结束，不另设输出 token 上限。\n\n你：\n模型：你好！很高兴见到你！有什么我可以帮你的吗？无论是聊天、解答问题，还是提供建议，我都在这里。😊\n\n你：已退出。\n",
+      "stderr": "[正在等待首段回答；排队或首次算子编译可能耗时数分钟。Ctrl+C 可中断等待。]\n[仍在等待首段回答，已等待 15 秒。]\n[仍在等待首段回答，已等待 30 秒。]\n[仍在等待首段回答，已等待 45 秒。]\n[仍在等待首段回答，已等待 60 秒。]\n[仍在等待首段回答，已等待 75 秒。]\n"
+    },
+    {
+      "payload": {
+        "model": "deepseek-v4-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is 2 + 2? Give only the answer."
+          },
+          {
+            "role": "assistant",
+            "content": "4"
+          },
+          {
+            "role": "user",
+            "content": "Add 3 to that. Give only the answer."
+          }
+        ],
+        "temperature": 0,
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        },
+        "chat_template_kwargs": {
+          "thinking": false
+        }
+      },
+      "ttft_seconds": 62.09830515971407,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 17,
+        "total_tokens": 19,
+        "completion_tokens": 2
+      },
+      "done": true,
+      "answer": "4",
+      "seconds": 63.036903069820255,
+      "name": "math"
+    },
+    {
+      "payload": {
+        "model": "deepseek-v4-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is 2 + 2? Give only the answer."
+          },
+          {
+            "role": "assistant",
+            "content": "4"
+          },
+          {
+            "role": "user",
+            "content": "Add 3 to that. Give only the answer."
+          }
+        ],
+        "temperature": 0,
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        },
+        "chat_template_kwargs": {
+          "thinking": false
+        }
+      },
+      "ttft_seconds": 410.6774281896651,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 33,
+        "total_tokens": 35,
+        "completion_tokens": 2
+      },
+      "done": true,
+      "answer": "7",
+      "seconds": 411.62637889990583,
+      "name": "multi_turn"
+    },
+    {
+      "payload": {
+        "model": "deepseek-v4-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is 2 + 2? Give only the answer."
+          },
+          {
+            "role": "assistant",
+            "content": "4"
+          },
+          {
+            "role": "user",
+            "content": "Add 3 to that. Give only the answer."
+          }
+        ],
+        "temperature": 0,
+        "stream": true,
+        "stream_options": {
+          "include_usage": true
+        },
+        "chat_template_kwargs": {
+          "thinking": false
+        }
+      },
+      "ttft_seconds": 3.7627033200114965,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 33,
+        "total_tokens": 35,
+        "completion_tokens": 2
+      },
+      "done": true,
+      "answer": "7",
+      "seconds": 4.560474679805338,
+      "name": "multi_turn_repeat"
+    }
+  ],
+  "initial_state": {
+    "phase": "ready",
+    "session": "c567b8097c82441f9535b8428214f89a",
+    "supervisor": {
+      "pid": 2357839,
+      "created": 1794318040.4
+    },
+    "workers": {
+      "pid": 2357840,
+      "created": 1794318040.52
+    },
+    "api": {
+      "pid": 2372289,
+      "created": 1794318142.1
+    },
+    "started": 1794318040.93872,
+    "ready_at": 1794318189.6144235
+  },
+  "idempotent_start": true,
+  "ranks": [
+    {
+      "rank": 0,
+      "pid": 2358259,
+      "session": "c567b8097c82441f9535b8428214f89a",
+      "context": 1048576,
+      "layers": 43,
+      "routed_experts_device": "cpu",
+      "gate_device": "npu:0",
+      "shared_expert_device": "npu:0"
+    },
+    {
+      "rank": 1,
+      "pid": 2358260,
+      "session": "c567b8097c82441f9535b8428214f89a",
+      "context": 1048576,
+      "layers": 43,
+      "routed_experts_device": "cpu",
+      "gate_device": "npu:1",
+      "shared_expert_device": "npu:1"
+    },
+    {
+      "rank": 2,
+      "pid": 2358261,
+      "session": "c567b8097c82441f9535b8428214f89a",
+      "context": 1048576,
+      "layers": 43,
+      "routed_experts_device": "cpu",
+      "gate_device": "npu:2",
+      "shared_expert_device": "npu:2"
+    },
+    {
+      "rank": 3,
+      "pid": 2358262,
+      "session": "c567b8097c82441f9535b8428214f89a",
+      "context": 1048576,
+      "layers": 43,
+      "routed_experts_device": "cpu",
+      "gate_device": "npu:3",
+      "shared_expert_device": "npu:3"
+    }
+  ],
+  "passed": true,
+  "finished": 1794318824.8546557
+}

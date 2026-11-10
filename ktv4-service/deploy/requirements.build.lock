@@ -1,0 +1,15 @@
+# Pinned from the verified source server, Python 3.11 / Linux aarch64.
+# Installed with --no-deps to preserve the observed version combination.
+cmake==4.4.4
+Jinja2==3.1.6
+MarkupSafe==3.0.4
+ninja==1.13.2
+packaging==26.3
+pip==26.2.2
+pybind11==3.1.0
+semantic-version==2.10.0
+setuptools==84.2.1
+setuptools-rust==1.13.0
+setuptools-scm==10.3.4
+vcs-versioning==2.6.0
+wheel==0.48.0

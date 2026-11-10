@@ -1,0 +1,628 @@
+{
+  "started": 1794318941.380316,
+  "deleted": [
+    "/mnt/nvme0n1/ktv4/build",
+    "/mnt/nvme0n1/ktv4/vllm-host",
+    "/mnt/nvme0n1/ktv4/weights",
+    "/mnt/nvme0n1/ktv4/mc3",
+    "/mnt/nvme0n1/ktv4/hf-cache",
+    "/mnt/nvme0n1/ktv4/home",
+    "/mnt/nvme0n1/ktv4/home92",
+    "/mnt/nvme0n1/ktv4/tmp92"
+  ],
+  "permission_residue": [
+    {
+      "path": "/mnt/nvme0n1/ktv4/code/llama.cpp-v4ref/gguf-py/gguf/__pycache__",
+      "error": "[Errno 13] Permission denied: '__pycache__'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/code/llama.cpp-v4ref/gguf-py/gguf",
+      "error": "[Errno 39] Directory not empty: 'gguf'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/code/llama.cpp-v4ref/gguf-py",
+      "error": "[Errno 39] Directory not empty: 'gguf-py'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/code/llama.cpp-v4ref",
+      "error": "[Errno 39] Directory not empty: 'llama.cpp-v4ref'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/code/reference",
+      "error": "[Errno 13] Permission denied: 'reference'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/code",
+      "error": "[Errno 39] Directory not empty: '/mnt/nvme0n1/ktv4/code'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/Flux1_dev/.gitignore",
+      "error": "[Errno 13] Permission denied: '.gitignore'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/Flux1_dev/benchmark_steps.py",
+      "error": "[Errno 13] Permission denied: 'benchmark_steps.py'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/Flux1_dev/benchmark_compile.py",
+      "error": "[Errno 13] Permission denied: 'benchmark_compile.py'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/Flux1_dev/test_npu_hang.py",
+      "error": "[Errno 13] Permission denied: 'test_npu_hang.py'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/Flux1_dev/README_AU.md",
+      "error": "[Errno 13] Permission denied: 'README_AU.md'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/Flux1_dev/test.py",
+      "error": "[Errno 13] Permission denied: 'test.py'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/Flux1_dev",
+      "error": "[Errno 13] Permission denied: 'Flux1_dev'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/vLLM-omni/.gitignore",
+      "error": "[Errno 13] Permission denied: '.gitignore'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/vLLM-omni/config/flux_serve_piecewise.yaml",
+      "error": "[Errno 13] Permission denied: 'flux_serve_piecewise.yaml'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/vLLM-omni/config/flux_serve_full_graph.yaml",
+      "error": "[Errno 13] Permission denied: 'flux_serve_full_graph.yaml'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/vLLM-omni/config/flux_serve_eager.yaml",
+      "error": "[Errno 13] Permission denied: 'flux_serve_eager.yaml'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/vLLM-omni/config",
+      "error": "[Errno 13] Permission denied: 'config'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/vLLM-omni/docker_run.sh",
+      "error": "[Errno 13] Permission denied: 'docker_run.sh'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/vLLM-omni/req_gen.py",
+      "error": "[Errno 13] Permission denied: 'req_gen.py'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/vLLM-omni/vllm_run.sh",
+      "error": "[Errno 13] Permission denied: 'vllm_run.sh'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/vLLM-omni",
+      "error": "[Errno 13] Permission denied: 'vLLM-omni'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/Helios/.gitignore",
+      "error": "[Errno 13] Permission denied: '.gitignore'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/Helios/README.md",
+      "error": "[Errno 13] Permission denied: 'README.md'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/Helios/pipe.py",
+      "error": "[Errno 13] Permission denied: 'pipe.py'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/Helios/sddefault.jpg",
+      "error": "[Errno 13] Permission denied: 'sddefault.jpg'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/Helios",
+      "error": "[Errno 13] Permission denied: 'Helios'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/Wan2/.gitignore",
+      "error": "[Errno 13] Permission denied: '.gitignore'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/Wan2/README_AU.md",
+      "error": "[Errno 13] Permission denied: 'README_AU.md'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/Wan2",
+      "error": "[Errno 13] Permission denied: 'Wan2'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/comfyUI/.gitignore",
+      "error": "[Errno 13] Permission denied: '.gitignore'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/comfyUI/README.md",
+      "error": "[Errno 13] Permission denied: 'README.md'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice/comfyUI",
+      "error": "[Errno 13] Permission denied: 'comfyUI'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/practice",
+      "error": "[Errno 13] Permission denied: 'practice'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.gitignore",
+      "error": "[Errno 13] Permission denied: '.gitignore'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/operators/spmm/README.md",
+      "error": "[Errno 13] Permission denied: 'README.md'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/operators/spmm",
+      "error": "[Errno 13] Permission denied: 'spmm'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/operators/gemm/run_ops.py",
+      "error": "[Errno 13] Permission denied: 'run_ops.py'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/operators/gemm/makefile",
+      "error": "[Errno 13] Permission denied: 'makefile'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/operators/gemm/README.md",
+      "error": "[Errno 13] Permission denied: 'README.md'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/operators/gemm/csrc/ascend_interface.cpp",
+      "error": "[Errno 13] Permission denied: 'ascend_interface.cpp'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/operators/gemm/csrc/kernels/gemm_torch.cpp",
+      "error": "[Errno 13] Permission denied: 'gemm_torch.cpp'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/operators/gemm/csrc/kernels/gemm.asc",
+      "error": "[Errno 13] Permission denied: 'gemm.asc'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/operators/gemm/csrc/kernels/gemm.h",
+      "error": "[Errno 13] Permission denied: 'gemm.h'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/operators/gemm/csrc/kernels",
+      "error": "[Errno 13] Permission denied: 'kernels'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/operators/gemm/csrc",
+      "error": "[Errno 13] Permission denied: 'csrc'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/operators/gemm",
+      "error": "[Errno 13] Permission denied: 'gemm'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/operators",
+      "error": "[Errno 13] Permission denied: 'operators'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/LICENSE",
+      "error": "[Errno 13] Permission denied: 'LICENSE'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/cmake/CMakeLists.txt",
+      "error": "[Errno 13] Permission denied: 'CMakeLists.txt'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/cmake/run.sh",
+      "error": "[Errno 13] Permission denied: 'run.sh'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/cmake/README.md",
+      "error": "[Errno 13] Permission denied: 'README.md'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/cmake/Makefile",
+      "error": "[Errno 13] Permission denied: 'Makefile'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/cmake/include/interface.h",
+      "error": "[Errno 13] Permission denied: 'interface.h'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/cmake/include/device.h",
+      "error": "[Errno 13] Permission denied: 'device.h'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/cmake/include",
+      "error": "[Errno 13] Permission denied: 'include'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/cmake/src/main.cpp",
+      "error": "[Errno 13] Permission denied: 'main.cpp'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/cmake/src/interface.asc",
+      "error": "[Errno 13] Permission denied: 'interface.asc'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/cmake/src/device.asc",
+      "error": "[Errno 13] Permission denied: 'device.asc'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/cmake/src",
+      "error": "[Errno 13] Permission denied: 'src'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/cmake",
+      "error": "[Errno 13] Permission denied: 'cmake'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/framework/install.sh",
+      "error": "[Errno 13] Permission denied: 'install.sh'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/framework/run_ops.py",
+      "error": "[Errno 13] Permission denied: 'run_ops.py'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/framework/makefile",
+      "error": "[Errno 13] Permission denied: 'makefile'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/framework/README.md",
+      "error": "[Errno 13] Permission denied: 'README.md'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/framework/csrc/ascend_interface.cpp",
+      "error": "[Errno 13] Permission denied: 'ascend_interface.cpp'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/framework/csrc/kernels/add.h",
+      "error": "[Errno 13] Permission denied: 'add.h'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/framework/csrc/kernels/add_custom.cpp",
+      "error": "[Errno 13] Permission denied: 'add_custom.cpp'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/framework/csrc/kernels/add.asc",
+      "error": "[Errno 13] Permission denied: 'add.asc'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/framework/csrc/kernels",
+      "error": "[Errno 13] Permission denied: 'kernels'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/framework/csrc",
+      "error": "[Errno 13] Permission denied: 'csrc'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/framework",
+      "error": "[Errno 13] Permission denied: 'framework'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/README.md",
+      "error": "[Errno 13] Permission denied: 'README.md'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/library/install.sh",
+      "error": "[Errno 13] Permission denied: 'install.sh'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/library/run_ops.py",
+      "error": "[Errno 13] Permission denied: 'run_ops.py'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/library/makefile",
+      "error": "[Errno 13] Permission denied: 'makefile'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/library/README.md",
+      "error": "[Errno 13] Permission denied: 'README.md'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/library/csrc/ascend_interface.cpp",
+      "error": "[Errno 13] Permission denied: 'ascend_interface.cpp'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/library/csrc/kernels/add.h",
+      "error": "[Errno 13] Permission denied: 'add.h'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/library/csrc/kernels/add_custom.cpp",
+      "error": "[Errno 13] Permission denied: 'add_custom.cpp'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/library/csrc/kernels/add.asc",
+      "error": "[Errno 13] Permission denied: 'add.asc'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/library/csrc/kernels",
+      "error": "[Errno 13] Permission denied: 'kernels'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/library/csrc",
+      "error": "[Errno 13] Permission denied: 'csrc'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/library",
+      "error": "[Errno 13] Permission denied: 'library'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/exe/makefile",
+      "error": "[Errno 13] Permission denied: 'makefile'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/exe/multi/host.asc",
+      "error": "[Errno 13] Permission denied: 'host.asc'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/exe/multi/device.asc",
+      "error": "[Errno 13] Permission denied: 'device.asc'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/exe/multi",
+      "error": "[Errno 13] Permission denied: 'multi'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/exe/singlefile.asc",
+      "error": "[Errno 13] Permission denied: 'singlefile.asc'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/exe/test",
+      "error": "[Errno 13] Permission denied: 'test'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/exe",
+      "error": "[Errno 13] Permission denied: 'exe'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/proj/CMakeLists.txt",
+      "error": "[Errno 13] Permission denied: 'CMakeLists.txt'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/proj/run.sh",
+      "error": "[Errno 13] Permission denied: 'run.sh'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/proj/README.md",
+      "error": "[Errno 13] Permission denied: 'README.md'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/proj/include/interface.h",
+      "error": "[Errno 13] Permission denied: 'interface.h'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/proj/include/device.h",
+      "error": "[Errno 13] Permission denied: 'device.h'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/proj/include",
+      "error": "[Errno 13] Permission denied: 'include'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/proj/src/main.cpp",
+      "error": "[Errno 13] Permission denied: 'main.cpp'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/proj/src/interface.asc",
+      "error": "[Errno 13] Permission denied: 'interface.asc'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/proj/src/device.asc",
+      "error": "[Errno 13] Permission denied: 'device.asc'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/proj/src",
+      "error": "[Errno 13] Permission denied: 'src'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos/proj",
+      "error": "[Errno 13] Permission denied: 'proj'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/demos",
+      "error": "[Errno 13] Permission denied: 'demos'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/README.md",
+      "error": "[Errno 13] Permission denied: 'README.md'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/branches",
+      "error": "[Errno 13] Permission denied: 'branches'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/packed-refs",
+      "error": "[Errno 13] Permission denied: 'packed-refs'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/logs/HEAD",
+      "error": "[Errno 13] Permission denied: 'HEAD'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/logs/refs/heads/main",
+      "error": "[Errno 13] Permission denied: 'main'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/logs/refs/heads",
+      "error": "[Errno 13] Permission denied: 'heads'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/logs/refs/remotes/origin/HEAD",
+      "error": "[Errno 13] Permission denied: 'HEAD'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/logs/refs/remotes/origin",
+      "error": "[Errno 13] Permission denied: 'origin'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/logs/refs/remotes",
+      "error": "[Errno 13] Permission denied: 'remotes'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/logs/refs",
+      "error": "[Errno 13] Permission denied: 'refs'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/logs",
+      "error": "[Errno 13] Permission denied: 'logs'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/config",
+      "error": "[Errno 13] Permission denied: 'config'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/index",
+      "error": "[Errno 13] Permission denied: 'index'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/HEAD",
+      "error": "[Errno 13] Permission denied: 'HEAD'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/objects/info",
+      "error": "[Errno 13] Permission denied: 'info'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/objects/pack/pack-9dcaf32e183efaeceb70febc0ecf61efa9bad098.pack",
+      "error": "[Errno 13] Permission denied: 'pack-9dcaf32e183efaeceb70febc0ecf61efa9bad098.pack'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/objects/pack/pack-9dcaf32e183efaeceb70febc0ecf61efa9bad098.idx",
+      "error": "[Errno 13] Permission denied: 'pack-9dcaf32e183efaeceb70febc0ecf61efa9bad098.idx'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/objects/pack",
+      "error": "[Errno 13] Permission denied: 'pack'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/objects",
+      "error": "[Errno 13] Permission denied: 'objects'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/hooks/pre-merge-commit.sample",
+      "error": "[Errno 13] Permission denied: 'pre-merge-commit.sample'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/hooks/fsmonitor-watchman.sample",
+      "error": "[Errno 13] Permission denied: 'fsmonitor-watchman.sample'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/hooks/update.sample",
+      "error": "[Errno 13] Permission denied: 'update.sample'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/hooks/post-update.sample",
+      "error": "[Errno 13] Permission denied: 'post-update.sample'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/hooks/prepare-commit-msg.sample",
+      "error": "[Errno 13] Permission denied: 'prepare-commit-msg.sample'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/hooks/pre-receive.sample",
+      "error": "[Errno 13] Permission denied: 'pre-receive.sample'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/hooks/commit-msg.sample",
+      "error": "[Errno 13] Permission denied: 'commit-msg.sample'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/hooks/pre-commit.sample",
+      "error": "[Errno 13] Permission denied: 'pre-commit.sample'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/hooks/pre-push.sample",
+      "error": "[Errno 13] Permission denied: 'pre-push.sample'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/hooks/pre-rebase.sample",
+      "error": "[Errno 13] Permission denied: 'pre-rebase.sample'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/hooks/pre-applypatch.sample",
+      "error": "[Errno 13] Permission denied: 'pre-applypatch.sample'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/hooks/applypatch-msg.sample",
+      "error": "[Errno 13] Permission denied: 'applypatch-msg.sample'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/hooks/push-to-checkout.sample",
+      "error": "[Errno 13] Permission denied: 'push-to-checkout.sample'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/hooks",
+      "error": "[Errno 13] Permission denied: 'hooks'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/description",
+      "error": "[Errno 13] Permission denied: 'description'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/info/exclude",
+      "error": "[Errno 13] Permission denied: 'exclude'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/info",
+      "error": "[Errno 13] Permission denied: 'info'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/shallow",
+      "error": "[Errno 13] Permission denied: 'shallow'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/refs/heads/main",
+      "error": "[Errno 13] Permission denied: 'main'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/refs/heads",
+      "error": "[Errno 13] Permission denied: 'heads'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/refs/remotes/origin/HEAD",
+      "error": "[Errno 13] Permission denied: 'HEAD'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/refs/remotes/origin",
+      "error": "[Errno 13] Permission denied: 'origin'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/refs/remotes",
+      "error": "[Errno 13] Permission denied: 'remotes'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/refs/tags",
+      "error": "[Errno 13] Permission denied: 'tags'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git/refs",
+      "error": "[Errno 13] Permission denied: 'refs'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/.git",
+      "error": "[Errno 13] Permission denied: '.git'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/docs/README.md",
+      "error": "[Errno 13] Permission denied: 'README.md'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/docs",
+      "error": "[Errno 13] Permission denied: 'docs'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage/Ascend910B3.ini",
+      "error": "[Errno 13] Permission denied: 'Ascend910B3.ini'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/AscendUsage",
+      "error": "[Errno 39] Directory not empty: '/mnt/nvme0n1/ktv4/AscendUsage'"
+    },
+    {
+      "path": "/mnt/nvme0n1/ktv4/tmp",
+      "error": "[Errno 13] Permission denied: '/mnt/nvme0n1/ktv4/tmp'"
+    }
+  ],
+  "finished": 1794318947.47264
+}

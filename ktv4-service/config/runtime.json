@@ -1,0 +1,38 @@
+{
+  "project": "/mnt/nvme0n1/ktv4",
+  "model_path": "/mnt/nvme1n1/bf16/w8a8-mtp",
+  "model_name": "deepseek-v4-flash",
+  "context_tokens": 1048576,
+  "client_output_cap": null,
+  "devices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "cpu_threads_per_worker": 32,
+  "routed_experts_per_layer": 256,
+  "routed_experts_per_worker": 64,
+  "routed_experts_device": "cpu",
+  "shared_expert_device": "npu",
+  "gate_device": "npu (replicated)",
+  "active_optimizations": [
+    "fast_cpu_decode",
+    "fused_shared",
+    "compact_shared_weights",
+    "fused_rms",
+    "fused_rope",
+    "cpu_sinkhorn",
+    "direct_attention"
+  ],
+  "module_origins": {
+    "vllm": "/mnt/nvme0n1/ktv4/vendor/vllm/vllm/__init__.py",
+    "vllm_ascend": "/mnt/nvme0n1/ktv4/env210/lib/python3.11/site-packages/vllm_ascend/__init__.py",
+    "torch": "/mnt/nvme0n1/ktv4/env210/lib/python3.11/site-packages/torch/__init__.py",
+    "torch_npu": "/mnt/nvme0n1/ktv4/env210/lib/python3.11/site-packages/torch_npu/__init__.py"
+  },
+  "python": "/mnt/nvme0n1/ktv4/env210/bin/python",
+  "cann": "/usr/local/Ascend/cann-9.1.0",
+  "driver": "/usr/local/Ascend/driver",
+  "atb_env": "/usr/local/Ascend/nnal/atb/set_env.sh"
+}

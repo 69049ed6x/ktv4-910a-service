@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "health": 200,
+  "service_session": "b4c5fd5ba72f4e0da9e9b02c7f042b7a",
+  "repeat_start_kept_same_workers": true,
+  "source_hashes_verified": 24,
+  "temporary_test_script_removed": true,
+  "rpc_results_removed": true,
+  "shell_syntax": "passed"
+}

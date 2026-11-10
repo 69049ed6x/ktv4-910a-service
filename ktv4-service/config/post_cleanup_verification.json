@@ -1,0 +1,105 @@
+{
+  "started": 1794319442.808705,
+  "tests": [
+    {
+      "name": "start_and_chat_chinese",
+      "exit_code": 0,
+      "answer_output": "四卡模型和 API 已就绪。\n\n模型：你好！很高兴见到你。有什么可以帮你的吗？😊\n"
+    },
+    {
+      "name": "api_math",
+      "answer": "4",
+      "finish_reason": "stop",
+      "seconds": 68.04480356955901,
+      "payload": {
+        "model": "deepseek-v4-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is 2 + 2? Give only the answer."
+          }
+        ],
+        "temperature": 0,
+        "stream": true,
+        "chat_template_kwargs": {
+          "thinking": false
+        }
+      }
+    }
+  ],
+  "phase": "complete",
+  "stopped_cleanly": true,
+  "fresh_start_seconds": 118.23006034968421,
+  "state": {
+    "phase": "ready",
+    "session": "b4c5fd5ba72f4e0da9e9b02c7f042b7a",
+    "supervisor": {
+      "pid": 2942226,
+      "created": 1794319454.9
+    },
+    "workers": {
+      "pid": 2942227,
+      "created": 1794319455.02
+    },
+    "api": {
+      "pid": 2954178,
+      "created": 1794319526.07
+    },
+    "started": 1794319455.433045,
+    "ready_at": 1794319573.0789816
+  },
+  "ranks": [
+    {
+      "rank": 0,
+      "pid": 2942845,
+      "session": "b4c5fd5ba72f4e0da9e9b02c7f042b7a",
+      "context": 1048576,
+      "layers": 43,
+      "routed_experts_device": "cpu",
+      "gate_device": "npu:0",
+      "shared_expert_device": "npu:0"
+    },
+    {
+      "rank": 1,
+      "pid": 2942846,
+      "session": "b4c5fd5ba72f4e0da9e9b02c7f042b7a",
+      "context": 1048576,
+      "layers": 43,
+      "routed_experts_device": "cpu",
+      "gate_device": "npu:1",
+      "shared_expert_device": "npu:1"
+    },
+    {
+      "rank": 2,
+      "pid": 2942847,
+      "session": "b4c5fd5ba72f4e0da9e9b02c7f042b7a",
+      "context": 1048576,
+      "layers": 43,
+      "routed_experts_device": "cpu",
+      "gate_device": "npu:2",
+      "shared_expert_device": "npu:2"
+    },
+    {
+      "rank": 3,
+      "pid": 2942848,
+      "session": "b4c5fd5ba72f4e0da9e9b02c7f042b7a",
+      "context": 1048576,
+      "layers": 43,
+      "routed_experts_device": "cpu",
+      "gate_device": "npu:3",
+      "shared_expert_device": "npu:3"
+    }
+  ],
+  "driver_logs": [
+    "/mnt/nvme0n1/ktv4/run/ascend-log/run/device-1/device-2942846_20261110220445759.log",
+    "/mnt/nvme0n1/ktv4/run/ascend-log/run/device-2/device-2942847_20261110220445759.log",
+    "/mnt/nvme0n1/ktv4/run/ascend-log/run/device-0/device-2942848_20261110220434757.log",
+    "/mnt/nvme0n1/ktv4/run/ascend-log/run/device-0/device-2942845_20261110220434757.log",
+    "/mnt/nvme0n1/ktv4/run/ascend-log/run/device-0/device-2942846_20261110220434757.log",
+    "/mnt/nvme0n1/ktv4/run/ascend-log/run/device-0/device-2942847_20261110220434757.log",
+    "/mnt/nvme0n1/ktv4/run/ascend-log/run/device-3/device-2942848_20261110220444759.log"
+  ],
+  "logging_to_supervisor": true,
+  "passed": true,
+  "finished": 1794319773.3918867
+}

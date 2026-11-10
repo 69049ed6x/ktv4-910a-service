@@ -1,0 +1,324 @@
+{
+ "binFileName": "KvQuantSparseFlashAttention_5ff1755f091a633249bbee112c2319d0",
+ "binFileSuffix": ".o",
+ "blockDim": -1,
+ "coreType": "MIX",
+ "intercoreSync": 1,
+ "kernelName": "KvQuantSparseFlashAttention_5ff1755f091a633249bbee112c2319d0",
+ "magic": "RT_DEV_BINARY_MAGIC_ELF",
+ "memoryStamping": [],
+ "opParaSize": 144,
+ "parameters": [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null
+ ],
+ "sha256": "481b5bd80ba7346a2aa7bd2edc33e9b6ceb351ce8498dda86a0ec9d9068f8264",
+ "workspace": {
+  "num": 1,
+  "size": [
+   -1
+  ],
+  "type": [
+   0
+  ]
+ },
+ "kernelList": [
+  {
+   "tilingKey": 1024,
+   "kernelType": "MIX_AIC",
+   "crossCoreSync": 1,
+   "taskRation": "1:2",
+   "kernelName": "KvQuantSparseFlashAttention_5ff1755f091a633249bbee112c2319d0_1024"
+  },
+  {
+   "tilingKey": 17408,
+   "kernelType": "MIX_AIC",
+   "crossCoreSync": 1,
+   "taskRation": "1:2",
+   "kernelName": "KvQuantSparseFlashAttention_5ff1755f091a633249bbee112c2319d0_17408"
+  },
+  {
+   "tilingKey": 1092,
+   "kernelType": "MIX_AIC",
+   "crossCoreSync": 1,
+   "taskRation": "1:2",
+   "kernelName": "KvQuantSparseFlashAttention_5ff1755f091a633249bbee112c2319d0_1092"
+  },
+  {
+   "tilingKey": 17476,
+   "kernelType": "MIX_AIC",
+   "crossCoreSync": 1,
+   "taskRation": "1:2",
+   "kernelName": "KvQuantSparseFlashAttention_5ff1755f091a633249bbee112c2319d0_17476"
+  },
+  {
+   "tilingKey": 1154,
+   "kernelType": "MIX_AIC",
+   "crossCoreSync": 1,
+   "taskRation": "1:2",
+   "kernelName": "KvQuantSparseFlashAttention_5ff1755f091a633249bbee112c2319d0_1154"
+  },
+  {
+   "tilingKey": 17538,
+   "kernelType": "MIX_AIC",
+   "crossCoreSync": 1,
+   "taskRation": "1:2",
+   "kernelName": "KvQuantSparseFlashAttention_5ff1755f091a633249bbee112c2319d0_17538"
+  },
+  {
+   "tilingKey": 1158,
+   "kernelType": "MIX_AIC",
+   "crossCoreSync": 1,
+   "taskRation": "1:2",
+   "kernelName": "KvQuantSparseFlashAttention_5ff1755f091a633249bbee112c2319d0_1158"
+  },
+  {
+   "tilingKey": 17542,
+   "kernelType": "MIX_AIC",
+   "crossCoreSync": 1,
+   "taskRation": "1:2",
+   "kernelName": "KvQuantSparseFlashAttention_5ff1755f091a633249bbee112c2319d0_17542"
+  }
+ ],
+ "taskRation": "tilingKey",
+ "optionalInputMode": "gen_placeholder",
+ "optionalOutputMode": "gen_placeholder",
+ "supportSuperKernel": 1,
+ "compileInfo": {},
+ "supportInfo": {
+  "implMode": "high_performance",
+  "int64Mode": false,
+  "simplifiedKeyMode": 0,
+  "simplifiedKey": [
+   "KvQuantSparseFlashAttention/d=0,p=1/1,2/2,2/2,2/3,2/1,2/0,2/0,2",
+   "KvQuantSparseFlashAttention/d=0,p=0/1,2/2,2/2,2/3,2/1,2/0,2/0,2",
+   "KvQuantSparseFlashAttention/d=1,p=1/1,2/2,2/2,2/3,2/1,2/0,2/0,2",
+   "KvQuantSparseFlashAttention/d=1,p=0/1,2/2,2/2,2/3,2/1,2/0,2/0,2"
+  ],
+  "optionalInputMode": "gen_placeholder",
+  "optionalOutputMode": "gen_placeholder",
+  "staticKey": "80b85f3fea58a8ff48c851b9a318c3f43f7c88049ce66d5c9b369c8754b7bca6,0cba6f141116ea141254ce174c302dfde54f474e0a6178516991d3011d294632",
+  "inputs": [
+   {
+    "name": "query",
+    "index": 0,
+    "dtype": "float16",
+    "format": "ND",
+    "paramType": "required",
+    "shape": [
+     -2
+    ],
+    "format_match_mode": "FormatAgnostic"
+   },
+   {
+    "name": "key",
+    "index": 1,
+    "dtype": "int8",
+    "format": "ND",
+    "paramType": "required",
+    "shape": [
+     -2
+    ],
+    "format_match_mode": "FormatAgnostic"
+   },
+   {
+    "name": "value",
+    "index": 2,
+    "dtype": "int8",
+    "format": "ND",
+    "paramType": "required",
+    "shape": [
+     -2
+    ],
+    "format_match_mode": "FormatAgnostic"
+   },
+   {
+    "name": "sparse_indices",
+    "index": 3,
+    "dtype": "int32",
+    "format": "ND",
+    "paramType": "required",
+    "shape": [
+     -2
+    ],
+    "format_match_mode": "FormatAgnostic"
+   },
+   {
+    "name": "key_dequant_scale",
+    "index": 4,
+    "dtype": "float32",
+    "format": "ND",
+    "paramType": "optional",
+    "shape": [
+     -2
+    ],
+    "format_match_mode": "FormatAgnostic"
+   },
+   {
+    "name": "value_dequant_scale",
+    "index": 5,
+    "dtype": "float32",
+    "format": "ND",
+    "paramType": "optional",
+    "shape": [
+     -2
+    ],
+    "format_match_mode": "FormatAgnostic"
+   },
+   {
+    "name": "block_table",
+    "index": 6,
+    "dtype": "int32",
+    "format": "ND",
+    "paramType": "optional",
+    "shape": [
+     -2
+    ],
+    "format_match_mode": "FormatAgnostic"
+   },
+   {
+    "name": "actual_seq_lengths_query",
+    "index": 7,
+    "dtype": "int32",
+    "format": "ND",
+    "paramType": "optional",
+    "shape": [
+     -2
+    ],
+    "format_match_mode": "FormatAgnostic"
+   },
+   {
+    "name": "actual_seq_lengths_kv",
+    "index": 8,
+    "dtype": "int32",
+    "format": "ND",
+    "paramType": "optional",
+    "shape": [
+     -2
+    ],
+    "format_match_mode": "FormatAgnostic"
+   }
+  ],
+  "outputs": [
+   {
+    "name": "attention_out",
+    "index": 0,
+    "dtype": "float16",
+    "format": "ND",
+    "paramType": "required",
+    "shape": [
+     -2
+    ],
+    "format_match_mode": "FormatAgnostic"
+   },
+   {
+    "name": "softmax_max",
+    "index": 1,
+    "dtype": "float32",
+    "format": "ND",
+    "paramType": "required",
+    "shape": [
+     -2
+    ],
+    "format_match_mode": "FormatAgnostic"
+   },
+   {
+    "name": "softmax_sum",
+    "index": 2,
+    "dtype": "float32",
+    "format": "ND",
+    "paramType": "required",
+    "shape": [
+     -2
+    ],
+    "format_match_mode": "FormatAgnostic"
+   }
+  ],
+  "attrs": [
+   {
+    "name": "scale_value",
+    "dtype": "float",
+    "value": 0.0
+   },
+   {
+    "name": "key_quant_mode",
+    "dtype": "int",
+    "value": 0
+   },
+   {
+    "name": "value_quant_mode",
+    "dtype": "int",
+    "value": 0
+   },
+   {
+    "name": "sparse_block_size",
+    "dtype": "int",
+    "value": 0
+   },
+   {
+    "name": "layout_query",
+    "dtype": "str",
+    "value": ""
+   },
+   {
+    "name": "layout_kv",
+    "dtype": "str",
+    "value": ""
+   },
+   {
+    "name": "sparse_mode",
+    "dtype": "int",
+    "value": 0
+   },
+   {
+    "name": "pre_tokens",
+    "dtype": "int",
+    "value": 0
+   },
+   {
+    "name": "next_tokens",
+    "dtype": "int",
+    "value": 0
+   },
+   {
+    "name": "attention_mode",
+    "dtype": "int",
+    "value": 0
+   },
+   {
+    "name": "quant_scale_repo_mode",
+    "dtype": "int",
+    "value": 0
+   },
+   {
+    "name": "tile_size",
+    "dtype": "int",
+    "value": 0
+   },
+   {
+    "name": "rope_head_dim",
+    "dtype": "int",
+    "value": 0
+   },
+   {
+    "name": "return_softmax_lse",
+    "dtype": "bool",
+    "value": false
+   }
+  ],
+  "opMode": "dynamic",
+  "deterministic": "ignore"
+ },
+ "filePath": "ascend910b/bin/kv_quant_sparse_flash_attention/KvQuantSparseFlashAttention_5ff1755f091a633249bbee112c2319d0.json"
+}

@@ -1,0 +1,50 @@
+{
+  "source_files": 10141,
+  "modified_original_files": [
+    {
+      "path": "DEPENDENCIES.md",
+      "source_sha256": "0fa0278849d0e02200efed8665784df5122e15e6351b44482e0875a573dd5e19",
+      "delivery_sha256": "7547858b890d5c6b3c2130b863b4c88dea86a85e1697995dfd314891ed2ae40e",
+      "reason": "delivery documentation; original retained under config/server_*"
+    },
+    {
+      "path": "README.md",
+      "source_sha256": "f56684a95c40d2dad400448a93a0fc964c52d42c71319d2708a2b0f8b63b9f21",
+      "delivery_sha256": "a40d85cab49300f2ae3e072d3458ca7ea2a066d0307d7fe81b83ff872e7fb759",
+      "reason": "delivery documentation; original retained under config/server_*"
+    },
+    {
+      "path": "app/env.sh",
+      "source_sha256": "4c3d91b2309f8c6f75a837198807eae0d8482f8b659ee5d194916031d67f0edb",
+      "delivery_sha256": "c04180564a42effe27d36b78d025510cb01c540a8b9d61b25051ef8f4f14475a",
+      "reason": "portable configuration loading"
+    },
+    {
+      "path": "chat.sh",
+      "source_sha256": "2bc257aa3edd6817aa8ce9825b34e8f5bc27b0145481a2d6e77d6d28675454ef",
+      "delivery_sha256": "ff5f55442b1d6c578362f5fd516dc51715e8cee8f7d607d2b08ea2480977df77",
+      "reason": "portable configuration loading"
+    },
+    {
+      "path": "start.sh",
+      "source_sha256": "a6c655f3226cf061bca207ffae7be59cfd5817cc1a166a9695b83f9fea5a4739",
+      "delivery_sha256": "d423c2b26ad80256aa9d8e431c68fc5c6e9043795bbb8ca39e4cbf56eef0e91b",
+      "reason": "portable configuration loading"
+    },
+    {
+      "path": "status.sh",
+      "source_sha256": "c1e6f5988c44bc707d8d1a0fe9c9ef67259c4c7a881bf3ae06effef277687c12",
+      "delivery_sha256": "99b34355282112baa3486375be2dd70d1366525d0b0cc3569b4fefe3bf9799fa",
+      "reason": "portable configuration loading"
+    },
+    {
+      "path": "stop.sh",
+      "source_sha256": "acc79cecbf295997f0f7d28e2d51bec59413e188c304dae94c75a3fa488b6c29",
+      "delivery_sha256": "7eec670925b5a7fa6b850d2e0f3d3c2147ea8d6119b5909ee0595ab40fbf6851",
+      "reason": "portable configuration loading"
+    }
+  ],
+  "missing_original_files": [],
+  "inference_implementation_changed": false,
+  "additional_files_role": "portable installer, dependency metadata, validation and documentation/checksum catalogs"
+}
